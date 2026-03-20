@@ -3,56 +3,56 @@
 2. Uses a human-readable text format as an intermediate representation
 3. Ensures reproducibility, transparency, and compatibility with CAD tools
 # Pipeline
-1.Binary STL
-2.Extract mesh data
-3.Convert to structured text file (vertices and triangles)
-4.Parse text file
-5.Recompute face normals
-6.Rebuild binary STL
-7.Import into build123d
-8.Export STEP and visualize
+1. Binary STL
+2. Extract mesh data
+3. Convert to structured text file (vertices and triangles)
+4. Parse text file
+5. Recompute face normals
+6. Rebuild binary STL
+7. Import into build123d
+8. Export STEP and visualize
 # Text File StructureHeader
-Source file information
-Triangle count and vertex count
-Bounding box dimensions
+1. Source file information
+2. Triangle count and vertex count
+3. Bounding box dimensions
 # Section 1 — Vertices
-Format: ID, X, Y, Z
-Stores unique vertices only
-Duplicate vertices are removed
+1. Format: ID, X, Y, Z
+2. Stores unique vertices only
+3. Duplicate vertices are removed
 # Section 2 — Triangles
-Format: Triangle ID, Vertex IDs, Normal
-Triangles reference vertex IDs
-Stored normals are ignored during reconstruction
+1. Format: Triangle ID, Vertex IDs, Normal
+2. Triangles reference vertex IDs
+3. Stored normals are ignored during reconstruction
 # Key Features
-Human-readable geometry representation
-Supports version control and diffing
-Modular and reusable pipeline
-Recomputed normals for accuracy
-Compatible with OCP CAD Viewer
-STEP export for CAD interoperability
+1. Human-readable geometry representation
+2. Supports version control and diffing
+3. Modular and reusable pipeline
+4. Recomputed normals for accuracy
+5. Compatible with OCP CAD Viewer
+6. STEP export for CAD interoperability
 # Important Insight
-Direct OCP BRep sewing does not render in the viewer
-Importing STL using build123d import_stl ensures visibility
-STL round-trip is required for reliable visualization
+1. Direct OCP BRep sewing does not render in the viewer
+2. Importing STL using build123d import_stl ensures visibility
+3. STL round-trip is required for reliable visualization
 # Components Processed
-Dpad Button
-External Button Array
-Face Button Array
-Front Panel
-Rear Panel
-Shoulder Button Array
-Side Button Array
+1. Dpad Button
+2. External Button Array
+3. Face Button Array
+4. Front Panel
+5. Rear Panel
+6. Shoulder Button Array
+7. Side Button Array
 # Validation
-Volume comparison between original and rebuilt STL
-Centroid alignment verification
-Expected deviation less than 0.001 percent
+1. Volume comparison between original and rebuilt STL
+2. Centroid alignment verification
+3. Expected deviation less than 0.001 percent
 # Common Issues and Fixes
-Geometry not visible: use import_stl instead of raw OCP topology
-Module not found: ensure correct Python environment
-File path errors: handle spaces and exact folder names
-Small STEP file: expected for mesh-based shell geometry
+1. Geometry not visible: use import_stl instead of raw OCP topology
+2. Module not found: ensure correct Python environment
+3. File path errors: handle spaces and exact folder names
+4. Small STEP file: expected for mesh-based shell geometry
 # Use Cases
-Reverse engineering
-CAD data pipelines
-AI training dataset generation
-Geometry inspection and debugging
+1. Reverse engineering
+2. CAD data pipelines
+3. AI training dataset generation
+4. Geometry inspection and debugging
