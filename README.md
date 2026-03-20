@@ -1,16 +1,16 @@
 # STL to build123d Geometry ReconstructionOverview:
-A structured pipeline to convert binary STL files into reconstructed CAD geometry using build123d
-Uses a human-readable text format as an intermediate representation
-Ensures reproducibility, transparency, and compatibility with CAD tools
+1.A structured pipeline to convert binary STL files into reconstructed CAD geometry using build123d
+2.Uses a human-readable text format as an intermediate representation
+3.Ensures reproducibility, transparency, and compatibility with CAD tools
 # Pipeline
-Binary STL
-Extract mesh data
-Convert to structured text file (vertices and triangles)
-Parse text file
-Recompute face normals
-Rebuild binary STL
-Import into build123d
-Export STEP and visualize
+1.Binary STL
+2.Extract mesh data
+3.Convert to structured text file (vertices and triangles)
+4.Parse text file
+5.Recompute face normals
+6.Rebuild binary STL
+7.Import into build123d
+8.Export STEP and visualize
 # Text File StructureHeader
 Source file information
 Triangle count and vertex count
